@@ -6,7 +6,7 @@
     <title>signup page</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style3.css">
-    <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+     <script src="bootstrap/js/bootstrap.min.js"></script> 
 </head>
 <body style="margin: 0px;">
     <div class="main container mx-0">
@@ -18,16 +18,21 @@
         </div>
         <div class="right">
             <h3 style="text-align: center;">SIGN UP</h3>
-            <form >
+            <form action="index.html" onsubmit="return validate();">
+
                 <div class="container form-group mx-0 my-0">
                     Name:
                     <input id="name" class="form-control mx-0" type="text" placeholder="enter your name">
                     Email id:
                     <input id="email" class="form-control mx-0" type="text" placeholder="yourname@mail.com">
                     Phone:
-                    <input id="phone" class="form-control mx-0" type="text" placeholder="enter your number">
+                    <!-- <input id="phone" class="form-control mx-0" type="text" placeholder="enter your number"> -->
+                    <input id="phone" class="form-control mx-0" type="text" name="Mobile" pattern="[1-9]{}[0-9]{9}" title="Enter 10 digit mobile number" placeholder="Mobile number" required> 
                     Password:
                     <input id="pwd" class="form-control mx-0" type="password" placeholder="password">
+                    <br>
+                    <span id="StrengthDisp" class="badge displayBadge">Weak</span>
+                    
                     DOB:
                     <input id="dob" class="form-control mx-0" type="date">
                     Gender:<br>
@@ -44,7 +49,7 @@
         
                 </div>
             </form>
-            
+            <script src="validation.js"></script>
         </div>
         
     </div>
